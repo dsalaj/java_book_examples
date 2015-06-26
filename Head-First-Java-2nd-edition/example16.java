@@ -3,6 +3,10 @@ public class example16 implements Runnable {
 
   public static void main(String[] args) {
 
+    try {
+      Thread.currentThread().sleep(1);
+    } catch(Exception ex) { ex.printStackTrace(); }
+
     example16 job = new example16();
     Thread a = new Thread(job);
     Thread b = new Thread(job);
